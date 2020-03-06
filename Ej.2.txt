@@ -1,0 +1,10 @@
+2.
+CREATE table 'empleado'
+(
+IdEmpleado int not null,
+nombre varchart(10),
+apellido varchart(10),
+direccion varchart(10),
+telefono int,
+idDepartamento int 
+);
