@@ -1,0 +1,22 @@
+1
+SELECT COUNT(*)
+FROM prestacion_servicio
+WHERE fecha BETWEEN '2018-10-01' AND '2018-11-26'
+
+2.
+Mostrar la cantidad total de prestaciones realizadas agrupadas por idVehiculo
+
+SELECT 'IdVehiculo', COUNT(*) AS prestacion_servicio
+FROM prestacion_servicio
+GROUP BY Idvehiculo
+
+3.Mostrar los vehículos con la menor cantidad de prestaciones de servicios realizados.
+
+3.1 SELECT 'IdVehiculo' 
+FROM prestacion_servicio
+WHERE idprestacion = (SELECT MIN (prestacion_servicio)FROM prestacion_servicio)
+3.2
+select min(contador)
+from (SELECT count(*) as contador
+			FROM empleado
+			GROUP BY codtra) as consulta
